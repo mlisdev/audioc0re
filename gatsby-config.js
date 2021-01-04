@@ -3,6 +3,7 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: "AudioC0RE",
+    siteUrl: "http://audioc0re.com"
   },
   plugins: [
     {
