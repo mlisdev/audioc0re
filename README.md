@@ -3,7 +3,6 @@
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
 </p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
-https://www.gatsbyjs.com/blog/100days-challenge-1/
+<a href="https://www.gatsbyjs.com/blog/100days-challenge-1/">Completed for Gatsby's 100 Days Challenge, first prompt</a><br/> 
+
+Deployed site is <a href="https://audioc0remaster30709.gtsb.io/">here</a>
