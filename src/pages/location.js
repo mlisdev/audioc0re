@@ -1,39 +1,43 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 
 
 const Location = () => {
-  const data = useStaticQuery(
+  const queryData = useStaticQuery(
     graphql`
-    query  {
-        allContentfulLocation(sort: {fields: contentful_id, order: DESC}) {
-            edges {
-            node {
-                city {
-                city
-                }
-            }
-            }
+    query MyQuery {
+    allContentfulLocation {
+        nodes {
+            slug
+        city {
+            city
+            id
         }
         }
+    }
+    }
+
     `
   )
+
   return (
-      <Layout>
-          <div>
-      {data.allContentfulBlogPost.edges.map(edge => {
-          return (
-            <li key={edge.node.id}>
-              [edge.node.city]
-            </li>
-          )
-      })}
-              </div>
+    <Layout>
+        <h1>Locations</h1>
+        <ul>
+          {queryData.allContentfulLocation.nodes.map((location) => {
+            return (
+                <li>
+                 <Link to={`/locations/${location.slug}`}>   
+                        {location.city.city}
+                        </Link>
+              </li>
+            );
+          })}
+        </ul>
     </Layout>
-  )
-}
+  );
+};
+
 
 export default Location
