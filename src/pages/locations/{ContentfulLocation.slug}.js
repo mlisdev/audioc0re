@@ -6,8 +6,11 @@ import { graphql } from 'gatsby';
 const LocationList = ({ data }) => {
   return (
     <Layout>
+      <div class="content">
         <h1>{data.contentfulLocation.city.city}</h1>
-        <p>Welcome! Everything is fine. </p>
+        <p class="goodplace">Welcome! <br />
+        Everything is fine. </p>
+        </div>
     </Layout>
   );
 };

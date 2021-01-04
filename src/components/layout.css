@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+body { 
+    font-family: 'Quicksand',sans-serif;
+    font-size: 14px;
+}
+
+a:link { 
+    color: teal; 
+    text-decoration: none;
+}
+
+
+a:visited {
+  color: teal;
+  text-decoration: none;
+}
+
+
+a:hover {
+  color: teal;
+  text-decoration: none;
+}
+
+
+a:active {
+  color: teal;
+  text-decoration: none;
+}
+
+#title { 
+    font-size: 24px; 
+    color: black; 
+    font-family: 'Audiowide';
+}
+
+.content { 
+    font-size: 16px; 
+    border: 1px solid #cdcdcd; 
+    height: 15rem; 
+    padding: 20px; 
+}
+
+.goodplace { 
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24pt; 
+    color: green; 
+    text-align: center; 
+}

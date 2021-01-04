@@ -22,7 +22,8 @@ const Location = () => {
   )
 
   return (
-    <Layout>
+      <Layout>
+          <div class="content">
         <h1>Locations</h1>
         <ul>
           {queryData.allContentfulLocation.nodes.map((location) => {
@@ -34,7 +35,8 @@ const Location = () => {
               </li>
             );
           })}
-        </ul>
+          </ul>
+          </div>
     </Layout>
   );
 };
