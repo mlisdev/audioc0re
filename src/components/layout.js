@@ -1,27 +1,16 @@
 import React from "react";
-import { Link } from "gatsby";
+import Header from "./header"; 
+import { Box, Heading, Link } from '@chakra-ui/react';
 // import "./layout.css"
-
-const ListLink = props => (
-  <li>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
 
 export default function Layout({ children }) {
   return (
     <div>
-      <header>
-        <Link to="/">
-          <h3>audioC0RE</h3>
-        </Link>
-        <ul>
-          <ListLink to="/">Home</ListLink>
-          <ListLink to="/about/">About</ListLink>
-          <ListLink to="/location/">Location</ListLink>
-        </ul>
-      </header>
-      {children}
-    </div>
+      <Header />
+      <Box as="div" m="0 auto" maxW="960px" p="1rem">
+        
+        {children}
+      </Box>
+      </div>
   )
 }

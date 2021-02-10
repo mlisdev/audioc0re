@@ -1,7 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import Layout from "../components/layout"
-
+import React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import Layout from "../components/layout";
+import { Heading, List, ListItem, ListIcon, VStack } from '@chakra-ui/react';
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const Location = () => {
   const queryData = useStaticQuery(
@@ -22,21 +23,25 @@ const Location = () => {
   )
 
   return (
-      <Layout>
-          <div class="content">
-        <h1>Locations</h1>
-        <ul>
+    <Layout>
+      <VStack
+    spacing={4}
+    align="stretch"
+      >
+        <Heading>Locations</Heading>
+        <List>
           {queryData.allContentfulLocation.nodes.map((location) => {
             return (
-                <li>
+              <ListItem>
+                <ListIcon as={ChevronRightIcon} color="cyan.700" />
                  <Link to={`/locations/${location.slug}`}>   
                         {location.city.city}
                         </Link>
-              </li>
+              </ListItem>
             );
           })}
-          </ul>
-          </div>
+          </List>
+      </VStack>
     </Layout>
   );
 };
